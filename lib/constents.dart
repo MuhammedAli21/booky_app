@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
-const KprimryColor = Color(0xff222831);
-const KnavyColor = Color(0xff94B4C1);
-const KgrayishColor = Color(0xffECEFCA);
+const kPrimryColor = Color(0xff222831);
+const kNavyColor = Color(0xff94B4C1);
+const kGrayishColor = Color(0xffECEFCA);
+
+const kScreenDucation = Duration(seconds: 1);

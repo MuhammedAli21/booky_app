@@ -1,5 +1,8 @@
+import 'package:booky_app/Feature/home/presentation/views/home_page.dart';
+import 'package:booky_app/constents.dart';
 import 'package:booky_app/core/utils.dart';
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -15,16 +18,10 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   @override
   void initState() {
-    animationController = AnimationController(
-      vsync: this,
-      duration: Duration(seconds: 2),
-    );
+    initBouncingAnimation();
 
-    bouncAnimation = Tween<double>(begin: -500, end: 0).animate(
-      CurvedAnimation(parent: animationController, curve: Curves.bounceOut),
-    );
+    navigateToHomeScreen();
 
-    animationController.forward();
     super.initState();
   }
 
@@ -56,5 +53,28 @@ class _SplashViewBodyState extends State<SplashViewBody>
         ],
       ),
     );
+  }
+
+  void initBouncingAnimation() {
+    animationController = AnimationController(
+      vsync: this,
+      duration: Duration(seconds: 2),
+    );
+
+    bouncAnimation = Tween<double>(begin: -500, end: 0).animate(
+      CurvedAnimation(parent: animationController, curve: Curves.bounceOut),
+    );
+
+    animationController.forward();
+  }
+
+  void navigateToHomeScreen() {
+    Future.delayed(Duration(seconds: 2), () {
+      Get.to(
+        () => HomePage(),
+        transition: Transition.fade,
+        duration: kScreenDucation,
+      );
+    });
   }
 }
