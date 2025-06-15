@@ -1,3 +1,4 @@
+import 'package:booky_app/core/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -10,17 +11,13 @@ class CustomAppBar extends StatelessWidget {
       child: Padding(
         padding: const EdgeInsets.symmetric(horizontal: 18),
         child: Row(
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: [
-            SizedBox(width: 8),
-            Text(
-              'Bookly App',
-              style: TextStyle(
-                fontSize: 22,
-                fontWeight: FontWeight.bold,
-                fontStyle: FontStyle.italic,
-              ),
+            Image.asset(
+              AssetsDate.logo,
+              height: MediaQuery.sizeOf(context).height * 0.038,
             ),
-            Spacer(),
+
             IconButton(
               onPressed: () {},
               icon: Icon(FontAwesomeIcons.magnifyingGlass),

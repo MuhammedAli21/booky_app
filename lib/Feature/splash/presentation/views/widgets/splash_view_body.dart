@@ -43,9 +43,12 @@ class _SplashViewBodyState extends State<SplashViewBody>
             builder: (context, child) {
               return Transform.translate(
                 offset: Offset(0, bouncAnimation.value),
-                child: Image.asset(
-                  AssetsDate.logo,
-                  height: MediaQuery.sizeOf(context).width * 0.5,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 18),
+                  child: Image.asset(
+                    AssetsDate.logo,
+                    height: MediaQuery.sizeOf(context).width * 0.5,
+                  ),
                 ),
               );
             },
