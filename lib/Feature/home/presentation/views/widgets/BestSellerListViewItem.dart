@@ -24,7 +24,7 @@ class BestSellerListViewitem extends StatelessWidget {
               ),
             ),
           ),
-          SizedBox(width: 30),
+          SizedBox(width: 20),
           Expanded(
             child: Column(
               mainAxisAlignment: MainAxisAlignment.center,
