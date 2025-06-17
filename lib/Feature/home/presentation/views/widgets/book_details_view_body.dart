@@ -1,3 +1,8 @@
+import 'package:booky_app/Feature/home/presentation/views/widgets/Custom_Book_Details_App_bar.dart';
+import 'package:booky_app/Feature/home/presentation/views/widgets/book_details_and_rating.dart';
+import 'package:booky_app/Feature/home/presentation/views/widgets/feature_list_view_item.dart';
+import 'package:booky_app/Feature/home/presentation/views/widgets/rating_item.dart';
+import 'package:booky_app/core/styles.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {
@@ -5,6 +10,18 @@ class BookDetailsViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Container();
+    var width = MediaQuery.of(context).size.width;
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 20),
+      child: Column(
+        children: [
+          CustomBookDetailsAppBar(),
+          SizedBox(height: 16),
+          SizedBox(width: width * .5, child: FeatureListViewItem()),
+          SizedBox(height: 42),
+          BookDetailsAndRating(),
+        ],
+      ),
+    );
   }
 }
