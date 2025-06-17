@@ -1,0 +1,13 @@
+import 'package:booky_app/Feature/home/presentation/views/home_view.dart';
+import 'package:booky_app/Feature/splash/presentation/views/splash_screen.dart';
+import 'package:go_router/go_router.dart';
+
+abstract class AppRouter {
+  static const kHomePage = '/HomePage';
+  static final router = GoRouter(
+    routes: [
+      GoRoute(path: '/', builder: (context, state) => SplashScreen()),
+      GoRoute(path: kHomePage, builder: (context, state) => HomePage()),
+    ],
+  );
+}

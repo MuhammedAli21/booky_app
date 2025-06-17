@@ -1,8 +1,7 @@
-import 'package:booky_app/Feature/home/presentation/views/home_page.dart';
-import 'package:booky_app/constents.dart';
+import 'package:booky_app/core/app_router.dart';
 import 'package:booky_app/core/utils.dart';
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
+import 'package:go_router/go_router.dart';
 
 class SplashViewBody extends StatefulWidget {
   const SplashViewBody({super.key});
@@ -73,11 +72,7 @@ class _SplashViewBodyState extends State<SplashViewBody>
 
   void navigateToHomeScreen() {
     Future.delayed(Duration(seconds: 2), () {
-      Get.to(
-        () => HomePage(),
-        transition: Transition.fade,
-        duration: kScreenDucation,
-      );
+      GoRouter.of(context).push(AppRouter.kHomePage);
     });
   }
 }
