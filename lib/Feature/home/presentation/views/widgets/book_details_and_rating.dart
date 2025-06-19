@@ -18,7 +18,7 @@ class BookDetailsAndRating extends StatelessWidget {
             style: Styles.textStyle18.copyWith(fontStyle: FontStyle.italic),
           ),
         ),
-        SizedBox(height: 20),
+        SizedBox(height: 10),
         RatingItem(mainAxisAlignment: MainAxisAlignment.center),
       ],
     );
