@@ -9,11 +9,11 @@ class HomeRepoImpl implements HomeRepo {
   HomeRepoImpl(this.apiService);
   ApiService apiService;
   @override
-  Future<Either<Failaure, BookModel>> fetchBestSellerBooks() async {
+  Future<Either<Failaure, BookModel>> fetchNewestBooks() async {
     try {
       var data = await apiService.get(
         endPoint:
-            'https://www.googleapis.com/books/v1/volumes?q=subject:programming&Filtering=free-ebooks&Sorting=newest ',
+            'https://www.googleapis.com/books/v1/volumes?q=subject:programming&Filtering=free-ebooks&Sorting=newest',
       );
       return right(BookModel.fromJson(data));
     } on DioException catch (e) {
@@ -24,8 +24,17 @@ class HomeRepoImpl implements HomeRepo {
   }
 
   @override
-  Future<Either<Failaure, BookModel>> fetchFeaturedBooks() {
-    // TODO: implement fetchFeaturedBooks
-    throw UnimplementedError();
+  Future<Either<Failaure, BookModel>> fetchFeaturedBooks() async {
+    try {
+      var data = await apiService.get(
+        endPoint:
+            'https://www.googleapis.com/books/v1/volumes?q=subject:programming&Filtering=free-ebooks',
+      );
+      return right(BookModel.fromJson(data));
+    } on DioException catch (e) {
+      return left(ServerFailaure.fromDioError(e));
+    } on Exception catch (e) {
+      return left(ServerFailaure(errorMessage: e.toString()));
+    }
   }
 }
