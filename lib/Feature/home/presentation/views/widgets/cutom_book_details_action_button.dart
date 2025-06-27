@@ -1,4 +1,4 @@
-import 'package:booky_app/core/styles.dart';
+import 'package:booky_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomBookDetailsActionButton extends StatelessWidget {

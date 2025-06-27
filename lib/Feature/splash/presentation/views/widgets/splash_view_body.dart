@@ -1,5 +1,5 @@
-import 'package:booky_app/core/app_router.dart';
-import 'package:booky_app/core/utils.dart';
+import 'package:booky_app/core/utils/app_router.dart';
+import 'package:booky_app/core/utils/utils.dart';
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 

@@ -1,5 +1,5 @@
 import 'package:booky_app/Feature/home/presentation/views/widgets/rating_item.dart';
-import 'package:booky_app/core/styles.dart';
+import 'package:booky_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsAndRating extends StatelessWidget {

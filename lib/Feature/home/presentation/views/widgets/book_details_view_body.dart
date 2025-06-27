@@ -3,7 +3,7 @@ import 'package:booky_app/Feature/home/presentation/views/widgets/action_buttons
 import 'package:booky_app/Feature/home/presentation/views/widgets/book_details_and_rating.dart';
 import 'package:booky_app/Feature/home/presentation/views/widgets/feature_list_view_item.dart';
 import 'package:booky_app/Feature/home/presentation/views/widgets/similer_books_list_view.dart';
-import 'package:booky_app/core/styles.dart';
+import 'package:booky_app/core/utils/styles.dart';
 import 'package:flutter/material.dart';
 
 class BookDetailsViewBody extends StatelessWidget {

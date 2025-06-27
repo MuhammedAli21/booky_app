@@ -1,4 +1,4 @@
-import 'package:booky_app/core/utils.dart';
+import 'package:booky_app/core/utils/utils.dart';
 import 'package:flutter/material.dart';
 
 class FeatureListViewItem extends StatelessWidget {
